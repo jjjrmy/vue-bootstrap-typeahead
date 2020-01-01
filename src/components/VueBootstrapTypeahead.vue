@@ -23,6 +23,11 @@
           <span class="input-group-text">{{ append }}</span>
         </slot>
       </div>
+      <template v-if="$slots.placeholder || placeholder">
+        <slot name="placeholder">
+          <label>{{ placeholder }}</label>
+        </slot>
+      </template>
     </div>
     <vue-bootstrap-typeahead-list
       class="vbt-autcomplete-list"
